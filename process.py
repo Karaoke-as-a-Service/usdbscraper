@@ -29,7 +29,7 @@ def login(s):
 
 
 def write_text(path, content):
-    with open(path, 'w', encoding="utf-8") as f:
+    with open(path, 'w') as f:
         f.write(content)
 
 def get(s, url):
@@ -37,7 +37,7 @@ def get(s, url):
     cache_file = f'cache/{cache_key}'
 
     if os.path.exists(cache_file):
-        return open(cache_file, encoding="utf-8").read()
+        return open(cache_file).read()
 
     content = s.get(url).content
 
