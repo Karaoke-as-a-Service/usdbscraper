@@ -7,7 +7,6 @@ import os
 import re
 
 import sys
-reload(sys)  # Reload is a hack
 sys.setdefaultencoding('UTF8')
 
 
