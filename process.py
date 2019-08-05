@@ -37,7 +37,7 @@ def get(s, url):
     cache_file = f'cache/{cache_key}'
 
     if os.path.exists(cache_file):
-        return open(cache_file).read()
+        return open(cache_file, encoding="utf-8").read()
 
     content = s.get(url).content
 
