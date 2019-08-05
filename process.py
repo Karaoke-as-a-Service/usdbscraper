@@ -29,7 +29,7 @@ def login(s):
 
 
 def write_text(path, content):
-    with open(path, 'w') as f:
+    with open(path, 'w', encoding="utf-8") as f:
         f.write(content)
 
 def get(s, url):
