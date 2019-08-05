@@ -6,6 +6,10 @@ import bs4
 import os
 import re
 
+import sys
+reload(sys)  # Reload is a hack
+sys.setdefaultencoding('UTF8')
+
 
 def url_editsongs(id):
     return f'http://usdb.animux.de/index.php?link=editsongs&id={id}'
