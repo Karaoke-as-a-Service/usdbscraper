@@ -1,0 +1,4 @@
+wget https://usdb.hehoe.de/ -O index.html.gz
+gzip -d index.html.gz
+cat index.html  | grep -Po 'http://usdb.animux.de[^"]+' > animux_links.txt
+grep -Po '[0-9]+$' animux_links.txt > animux_ids.txt
