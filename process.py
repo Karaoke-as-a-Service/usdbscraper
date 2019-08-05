@@ -6,8 +6,6 @@ import bs4
 import os
 import re
 
-import sys
-sys.setdefaultencoding('UTF8')
 
 
 def url_editsongs(id):
