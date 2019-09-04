@@ -3,3 +3,4 @@ files
 videos
 *.m4a
 *.part
+__pycache__
