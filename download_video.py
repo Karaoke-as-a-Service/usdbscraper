@@ -10,7 +10,7 @@ youtube_id = re.compile('[A-Za-z0-9_-]+$')
 def set_attr(content, videofile, attr):
     found = False
     for line in content:
-        line = line.strip()
+        line = line.strip('\n')
         if line.startswith(f'#{attr}:'):
             found = True
             yield f'#{attr}:{videofile}\n'
