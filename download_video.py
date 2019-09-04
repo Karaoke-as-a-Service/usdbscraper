@@ -18,8 +18,10 @@ def songs():
 def main():
     for file, content, youtubelinks in songs():
         print(file)
+        songname = os.path.splitext(file)[0]
+        dir = 'videos/' + songname
 
-        if os.path.exists('videos/' + file):
+        if os.path.exists(dir):
             continue
 
         for ytlink in youtubelinks:
@@ -42,7 +44,6 @@ def main():
         if not videofile:
             continue
 
-        dir = 'videos/' + os.path.splitext(file)[0]
         os.mkdir(dir)
         with open(dir + '/' + file, 'w') as f:
             content = set_attr(content, videofile, 'VIDEO')
