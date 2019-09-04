@@ -35,7 +35,7 @@ def main():
         txtfile = song + '/' + os.path.basename(song) + '.txt'
         content = open(txtfile).read().splitlines()
         with open(txtfile, 'w') as f:
-            f.writelines(set_attr(content, coverfile, cover_url))
+            f.writelines(set_attr(content, coverfile, 'COVER'))
 
 
 if __name__ == '__main__':
