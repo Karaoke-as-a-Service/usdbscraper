@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.6
+
 import sys
 from ultrastartxt import get_attr
 import argparse
