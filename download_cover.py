@@ -26,7 +26,9 @@ def main():
         try:
             cover_url = get_cover(os.path.basename(song))
         except:
-            pass
+            continue
+        if 'default_cover_image' in cover_url:
+            continue
         print(cover_url)
         coverfile = 'cover' + os.path.splitext(cover_url)[1].partition('?')[0]
         coverpath = song + '/' + coverfile
