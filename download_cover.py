@@ -17,7 +17,7 @@ def get_cover(name):
         'per_page': '1',
         'q': name,
     })
-    return r.json()['response']['sections'][0]['hits'][0]['result']['header_image_thumbnail_url']
+    return r.json()['response']['sections'][0]['hits'][0]['result']['song_art_image_url']
 
 
 def main():
