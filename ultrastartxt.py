@@ -10,3 +10,10 @@ def set_attr(content, value, attr):
                 found = True
                 yield f'#{attr}:{value}\n'
             yield f'{line}\n'
+
+
+def get_attr(content, attr):
+    for line in content:
+        if line.startswith(f'#{attr}:'):
+            return line.partition(':')[2]
+    return None
