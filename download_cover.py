@@ -28,7 +28,7 @@ def main():
         except:
             pass
         print(cover_url)
-        coverfile = 'cover' + os.path.splitext(cover_url)[1]
+        coverfile = 'cover' + os.path.splitext(cover_url)[1].partition('?')[0]
         coverpath = song + '/' + coverfile
 
         with open(coverpath, 'wb') as f:
