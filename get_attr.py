@@ -16,7 +16,8 @@ def main():
 
         try:
             value = get_attr(open(file).readlines(), args.attribute).strip()
-        except:
+        except Exception as ex:
+            print(str(ex), file=sys.stderr)
             continue
 
         print(value, end='')
