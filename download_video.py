@@ -27,7 +27,6 @@ def main():
             continue
 
         for ytlink in youtubelinks:
-            ytid = youtube_id.findall(ytlink)[0]
             try:
                 videofile = None
 
@@ -37,7 +36,7 @@ def main():
                         videofile = kwargs['filename']
 
                 with youtube_dl.YoutubeDL({'format': 'best', 'progress_hooks': [progress]}) as ydl:
-                    ydl.download(['https://www.youtube.com/watch?v=' + ytid])
+                    ydl.download([ytlink])
 
                 break
             except Exception as ex:
