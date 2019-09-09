@@ -47,7 +47,16 @@ def get(s, url):
 
     return content
 
-youtube_link = re.compile('https?://www.youtube.com/v/[A-Za-z0-9_-]+')
+youtube_link = re.compile(
+    '(' +
+        '|'.join([
+            'https?://www.youtube.com/v/[A-Za-z0-9_-]+',
+            'https?://www.dailymotion.com/swf/[A-Za-z0-9_-]+',
+            'https?://vimeo.com/[A-Za-z0-9_-]+',
+            'https?://player.vimeo.com/video/[A-Za-z0-9_-]+',
+        ])
+    + ')'
+)
 
 def main():
     s = requests.Session()
